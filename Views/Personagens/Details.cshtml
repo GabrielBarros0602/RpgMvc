@@ -1,0 +1,60 @@
+@model RpgMvc.Models.PersonagemViewModel
+
+@{
+    ViewBag.title = "Detalhes do Personagem";
+}
+
+@if (@TempData["Mensagem"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Mensagem"]
+    </div>
+}
+
+@if (@TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<h2>Detalhes do Personagem</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.Id)</dt>
+        <dt>@Html.DisplayFor(model => model.Id)</dt>
+
+        <dt>@Html.DisplayNameFor(model => model.Nome)</dt>
+        <dt>@Html.DisplayFor(model => model.Nome)</dt>
+
+        <dt>@Html.DisplayNameFor(model => model.PontosVida)</dt>
+        <dt>@Html.DisplayFor(model => model.PontosVida)</dt>
+
+        <dt>@Html.DisplayNameFor(model => model.Defesa)</dt>
+        <dt>@Html.DisplayFor(model => model.Defesa)</dt>
+
+        <dt>@Html.DisplayNameFor(model => model.Inteligencia)</dt>
+        <dt>@Html.DisplayFor(model => model.Inteligencia)</dt>
+
+        <dt>@Html.DisplayNameFor(model => model.Forca)</dt>
+        <dt>@Html.DisplayFor(model => model.Forca)</dt>
+
+        <dt>@Html.DisplayNameFor(model => model.Classe)</dt>
+        <dt>@Html.DisplayFor(model => model.Classe)</dt>
+
+        <dt>@Html.DisplayNameFor(model => model.Disputas)</dt>
+        <dt>@Html.DisplayFor(model => model.Disputas)</dt>
+
+        <dt>@Html.DisplayNameFor(model => model.Vitorias)</dt>
+        <dt>@Html.DisplayFor(model => model.Vitorias)</dt>
+
+        <dt>@Html.DisplayNameFor(model => model.Derrotas)</dt>
+        <dt>@Html.DisplayFor(model => model.Derrotas)</dt>
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id })
+    @Html.ActionLink("Retornar", "Index")
+</p>
